@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Grafos</title>
+</head>
+<body>
+    <h1>Generador de Grafos</h1>
+    <form action="/select_matrix" method="POST">
+        <label for="matrix_size">Seleccione el tamaño de la matriz (entre 8 y 15):</label>
+        <input type="number" id="matrix_size" name="matrix_size" min="8" max="15" required><br><br>
+        
+        <label for="matrix_type">Seleccione cómo desea generar la matriz:</label><br>
+        <input type="radio" id="random" name="matrix_type" value="random" checked>
+        <label for="random">Generar Matriz Aleatoria</label><br>
+        <input type="radio" id="manual" name="matrix_type" value="manual">
+        <label for="manual">Ingresar Matriz Manualmente</label><br><br>
+        
+        <button type="submit">Continuar</button>
+    </form>
+</body>
+</html>

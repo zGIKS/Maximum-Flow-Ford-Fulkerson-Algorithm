@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de la Matriz</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Matriz de Tamaño {{ n }} x {{ n }}</h1>
+    <form action="/generate_graph" method="POST">
+        <input type="hidden" name="n" value="{{ n }}">
+        <table>
+            {% for i in range(n) %}
+            <tr>
+                {% for j in range(n) %}
+                <td>
+                    <input type="number" name="matrix_{{ i }}_{{ j }}" 
+                    value="{{ matrix[i][j] if matrix is not none else 0 }}" style="width: 50px;">
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <button type="submit">Generar Grafo</button>
+    </form>
+</body>
+</html>

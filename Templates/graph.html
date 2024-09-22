@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafo Generado</title>
+</head>
+<body>
+    <h1>Grafo Generado</h1>
+    
+    <h2>Matriz Utilizada:</h2>
+    <pre>{{ matrix_str }}</pre>
+    
+    <h2>Imagen del Grafo:</h2>
+    <img src="data:image/png;base64,{{ graph_img }}" alt="Graph">
+    
+    <h2>Flujo Máximo:</h2>
+    <p>El flujo máximo de la red es: <strong>{{ max_flow }}</strong></p>
+    
+    <br><br>
+    <a href="/">Generar otro grafo</a>
+</body>
+</html>
